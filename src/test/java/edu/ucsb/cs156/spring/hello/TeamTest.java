@@ -35,7 +35,7 @@ public class TeamTest {
 	assertTrue(team.equals(team));
 
 	assertFalse(team.equals(null));
-	assertFalse(team.equals("not-team"));
+	assertFalse(team.equals("not team"));
 
 	Team same = new Team("test-team");
 	Team diffName = new Team("other-team");
@@ -51,14 +51,14 @@ public class TeamTest {
     
     @Test
     public void hashCode_equal() {
-	Team t1 = new Team("test-team");
-	Team t2 = new Team ("test-team");
+	Team t1 = new Team("test team");
+	Team t2 = new Team ("test team");
 	assertEquals(t1.hashCode(), t2.hashCode());
     }
 
     @Test
     public void hashCode_specificVal() {
-	Team t = new Team("test-team");
+	Team t = new Team("test team");
 	int result = t.hashCode();
 	assertEquals(-1238304469, result);
     }  
